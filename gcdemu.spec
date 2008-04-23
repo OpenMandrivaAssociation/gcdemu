@@ -29,6 +29,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	python
 BuildRequires:	intltool
 BuildRequires:	gnome-common
+BuildRequires:	gnome-doc-utils
 BuildRequires:	pygtk2.0-devel
 Requires:	cdemu-daemon
 Requires:	pygtk2.0
