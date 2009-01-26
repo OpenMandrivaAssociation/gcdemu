@@ -72,11 +72,12 @@ rm -rf %buildroot
 
 %find_lang %name
 
+%if %mdkversion < 200900
 %post
 %post_install_gconf_schemas gcdemu
-
 %preun
 %preun_uninstall_gconf_schemas gcdemu
+%endif
 
 %clean
 rm -rf %{buildroot}
