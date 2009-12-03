@@ -1,25 +1,11 @@
-
-%define version 1.1.0
-%define snapshot 0
-%define rel	2
-
-%if 0
-# Update commands:
-REV=$(svn info https://cdemu.svn.sourceforge.net/svnroot/cdemu/trunk/gcdemu | sed -ne 's/^Last Changed Rev: //p')
-svn export -r $REV https://cdemu.svn.sourceforge.net/svnroot/cdemu/trunk/gcdemu gcdemu-$REV
-tar -cjf gcdemu-$REV.tar.bz2 gcdemu-$REV
-%endif
+%define version 1.2.0
+%define rel	1
 
 Name:		gcdemu
 Version:	%version
 Summary:	GNOME applet for controlling CDEmu daemon
-%if %snapshot
-Release:	%mkrel 1.svn%snapshot.%rel
-Source:		%name-%snapshot.tar.bz2
-%else
 Release:	%mkrel %rel
 Source:		http://downloads.sourceforge.net/cdemu/%name-%version.tar.bz2
-%endif
 Group:		Emulators
 License:	GPLv2+
 URL:		http://cdemu.sourceforge.net/
@@ -53,16 +39,9 @@ In addition, the applet listens to signals emitted by CDEmu daemon
 and provides notifications via libnotify.
 
 %prep
-%if %snapshot
-%setup -q -n %name-%snapshot
-%else
 %setup -q
-%endif
 
 %build
-%if %snapshot
-./autogen.sh
-%endif
 %configure2_5x
 %make
 
