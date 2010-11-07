@@ -1,5 +1,5 @@
 %define version 1.3.0
-%define rel	1
+%define rel	2
 
 Name:		gcdemu
 Version:	%version
