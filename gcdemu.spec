@@ -1,10 +1,7 @@
-%define version 1.3.0
-%define rel	3
-
 Name:		gcdemu
-Version:	%version
+Version:	1.4.0
 Summary:	GNOME applet for controlling CDEmu daemon
-Release:	%mkrel %rel
+Release:	1
 Source:		http://downloads.sourceforge.net/cdemu/%name-%version.tar.gz
 Group:		Emulators
 License:	GPLv2+
@@ -59,16 +56,10 @@ rm -rf %buildroot
 %preun_uninstall_gconf_schemas gcdemu
 %endif
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %name.lang
 %defattr(-,root,root)
 %doc README AUTHORS
 %{_sysconfdir}/gconf/schemas/gcdemu.schemas
-%{python_sitelib}/gcdemu
-%{_libdir}/bonobo/servers/GNOME_gCDEmuApplet.server
-%{_libdir}/gcdemu
-%{_datadir}/omf/gcdemu
-%doc %{_datadir}/gnome/help/gcdemu
-%{_datadir}/pixmaps/%{name}
+%{_bindir}/gcdemu
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/pixmaps/%{name}.svg
