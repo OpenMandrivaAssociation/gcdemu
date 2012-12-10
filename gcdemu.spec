@@ -52,3 +52,47 @@ and provides notifications via libnotify.
 %{_bindir}/gcdemu
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.svg
+
+
+%changelog
+* Mon Feb 27 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.5.0-1
++ Revision: 781118
+- update to 1.5.0
+
+* Wed Nov 23 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.0-1
++ Revision: 732868
+- version update to 1.4.0
+
+* Mon May 23 2011 Funda Wang <fwang@mandriva.org> 1.3.0-3
++ Revision: 677699
+- rebuild to add gconftool as req
+
+* Sun Nov 07 2010 Jani Välimaa <wally@mandriva.org> 1.3.0-2mdv2011.0
++ Revision: 594780
+- rebuild for python 2.7
+
+* Sat Sep 04 2010 Anssi Hannula <anssi@mandriva.org> 1.3.0-1mdv2011.0
++ Revision: 575787
+- new version
+- bump requirement on cdemu-daemon due to bus switch
+
+* Thu Dec 03 2009 Funda Wang <fwang@mandriva.org> 1.2.0-1mdv2010.1
++ Revision: 472925
+- new version 1.2.0
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 1.1.0-2mdv2010.0
++ Revision: 437657
+- rebuild
+
+* Tue Jan 27 2009 Guillaume Bedot <littletux@mandriva.org> 1.1.0-1mdv2009.1
++ Revision: 333932
+- Release 1.1.0
+
+* Sun Jan 04 2009 Funda Wang <fwang@mandriva.org> 1.0.0-1.svn300.2mdv2009.1
++ Revision: 324193
+- rebuild
+
+* Wed Apr 23 2008 Anssi Hannula <anssi@mandriva.org> 1.0.0-1.svn300.1mdv2009.0
++ Revision: 197018
+- initial Mandriva release
+
