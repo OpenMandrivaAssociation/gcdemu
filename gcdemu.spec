@@ -1,7 +1,7 @@
 Summary:	GTK+ based GUI for controlling CDEmu daemon
 Name:		gcdemu
-Version:	2.1.1
-Release:	2
+Version:	3.2.1
+Release:	1
 Group:		Emulators
 License:	GPLv2+
 Url:		http://cdemu.sourceforge.net/
@@ -9,9 +9,10 @@ Source0:	http://downloads.sourceforge.net/cdemu/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	cmake
 BuildRequires:	intltool
+BuildRequires:	python2
 # for cdemu daemon interface v3
 Requires:	cdemu-daemon
-Requires:	python-gi
+Requires:	python2dist(pygobject)
 Requires:	typelib(Notify) >= 0.7
 Requires:	typelib(Gtk) >= 3.0
 BuildArch:	noarch
@@ -41,10 +42,10 @@ notifications via libnotify.
 
 %build
 %cmake -DPOST_INSTALL_HOOKS:BOOL=OFF
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 
 %find_lang %{name}
 
