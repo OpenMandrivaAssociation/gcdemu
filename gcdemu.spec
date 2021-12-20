@@ -1,11 +1,11 @@
 Summary:	GTK+ based GUI for controlling CDEmu daemon
 Name:		gcdemu
-Version:	3.2.4
+Version:	3.2.6
 Release:	1
 Group:		Emulators
 License:	GPLv2+
 Url:		http://cdemu.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/cdemu/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/cdemu/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	cmake
 BuildRequires:	intltool
@@ -38,7 +38,7 @@ notifications via libnotify.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %cmake -DPOST_INSTALL_HOOKS:BOOL=OFF
@@ -48,5 +48,3 @@ notifications via libnotify.
 %make_install -C build
 
 %find_lang %{name}
-
-
