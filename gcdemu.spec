@@ -4,7 +4,7 @@ Version:	3.2.6
 Release:	1
 Group:		Emulators
 License:	GPLv2+
-Url:		http://cdemu.sourceforge.net/
+Url:		https://cdemu.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/cdemu/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(gconf-2.0)
 BuildRequires:	cmake
