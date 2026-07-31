@@ -1,6 +1,6 @@
 Summary:	GTK+ based GUI for controlling CDEmu daemon
 Name:		gcdemu
-Version:	3.2.6
+Version:	3.3.1
 Release:	1
 Group:		Emulators
 License:	GPLv2+
